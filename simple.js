@@ -45,7 +45,12 @@
    function processInput() {
       let currentInput = input.value;
       input.value ='';
-      alert(currentInput);
+
+      if(validInputs.indexOf(currentInput)== -1){
+        message.innerHTML = "IHATETHIS";
+      }else{
+        message.innerHTML = responses[validInputs.indexOf(currentInput)];
+      }
    }
 
 })();
